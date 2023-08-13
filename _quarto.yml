@@ -1,12 +1,37 @@
 project:
   type: book
+  output-dir: docs
 
 book:
-  title: "mybook"
-  author: "Norah Jones"
-  date: "2023/8/13"
+  title: "R for Data Science (2e)"
+ # author: "Wang Tong"
+ # date: "2023/8/13"
+  cover-image: cover.jpg
+  cover-image-alt: "Hello, World"
+  favicon: favicon.png
+  site-url: https://r4ds.hadley.nz/
+  repo-url: https://github.com/hadley/r4ds/
+  repo-branch: main
+  repo-actions: [edit, issue]
+  reader-mode: false
+
+  sidebar: 
+    search: true
+    style: floating
+    background: lightblue
+    border: false
+  
+  page-footer:
+    left: |
+      R for Data Science (2e) was written by Hadley Wickham, Mine
+      Çetinkaya-Rundel, and Garrett Grolemund.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  
   chapters:
     - index.qmd
+    
+    - preface-2e.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
@@ -15,9 +40,14 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
-  pdf:
-    documentclass: scrreprt
+    theme: 
+      - cosmo
+      - r4ds.scss
+    code-link: true
+    
+    author-meta: "Wang Tong, Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund"
+    include-in-header: "plausible.html"
+
 
 editor: visual
 
