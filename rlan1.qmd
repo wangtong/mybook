@@ -1,0 +1,17 @@
+# 生物信息教学 {.unnumbered}
+
+
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+
+
+
+
+
+
+青岛同源基因科技有限责任公司
+
+2023年 6月
+
+（版权所有，请勿传播）

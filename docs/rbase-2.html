@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.3.450">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="王通">
-<title>生物信息大百科 - 关于本书</title>
+<title>生物信息大百科 - 2&nbsp; R软件安装</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -27,8 +27,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./rbase-1.html" rel="next">
-<link href="./preface.html" rel="prev">
+<link href="./rbase-1.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -66,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">关于本书</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./rbase-1.html">R语言</a></li><li class="breadcrumb-item"><a href="./rbase-2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R软件安装</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -104,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">关于本书</span></a>
   </div>
 </li>
@@ -137,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rbase-2.html" class="sidebar-item-text sidebar-link">
+  <a href="./rbase-2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R软件安装</span></span></a>
   </div>
 </li>
@@ -156,11 +155,34 @@ ul.task-list li input[type="checkbox"] {
 </nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#windows%E7%B3%BB%E7%BB%9F" id="toc-windows系统" class="nav-link active" data-scroll-target="#windows%E7%B3%BB%E7%BB%9F"><span class="header-section-number">2.0.1</span> windows系统：</a></li>
+  <li><a href="#mac%E7%B3%BB%E7%BB%9F" id="toc-mac系统" class="nav-link" data-scroll-target="#mac%E7%B3%BB%E7%BB%9F"><span class="header-section-number">2.0.2</span> Mac系统</a></li>
+  <li><a href="#centos%E7%B3%BB%E7%BB%9F" id="toc-centos系统" class="nav-link" data-scroll-target="#centos%E7%B3%BB%E7%BB%9F"><span class="header-section-number">2.0.3</span> CentOS系统：</a></li>
+  <li><a href="#bioconda%E5%AE%89%E8%A3%85r" id="toc-bioconda安装r" class="nav-link" data-scroll-target="#bioconda%E5%AE%89%E8%A3%85r"><span class="header-section-number">2.0.4</span> bioconda安装R</a></li>
+  <li>
+<a href="#rstudio%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85" id="toc-rstudio软件安装" class="nav-link" data-scroll-target="#rstudio%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="header-section-number">2.1</span> Rstudio软件安装</a>
+  <ul class="collapse">
+<li><a href="#%E5%AE%89%E8%A3%85rstudio" id="toc-安装rstudio" class="nav-link" data-scroll-target="#%E5%AE%89%E8%A3%85rstudio"><span class="header-section-number">2.1.1</span> 安装Rstudio</a></li>
+  <li><a href="#rstudio-server%E5%AE%89%E8%A3%85" id="toc-rstudio-server安装" class="nav-link" data-scroll-target="#rstudio-server%E5%AE%89%E8%A3%85"><span class="header-section-number">2.1.2</span> rstudio-server安装</a></li>
+  <li><a href="#%E8%A7%A3%E5%86%B3rstudio%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98" id="toc-解决rstudio无法识别中文问题" class="nav-link" data-scroll-target="#%E8%A7%A3%E5%86%B3rstudio%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98"><span class="header-section-number">2.1.3</span> 解决Rstudio无法识别中文问题</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#rstudio-server" id="toc-rstudio-server" class="nav-link" data-scroll-target="#rstudio-server"><span class="header-section-number">2.2</span> Rstudio-server</a>
+  <ul class="collapse">
+<li><a href="#%E7%99%BB%E5%85%A5rstudio-server" id="toc-登入rstudio-server" class="nav-link" data-scroll-target="#%E7%99%BB%E5%85%A5rstudio-server"><span class="header-section-number">2.2.1</span> 登入rstudio-server</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wangtong/mybook/edit/main/rbase-2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/wangtong/mybook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-intro" class="quarto-section-identifier">关于本书</span></h1>
+<h1 class="title">
+<span class="chapter-number">2</span>&nbsp; <span class="chapter-title">R软件安装</span>
+</h1>
 </div>
 
 
@@ -173,11 +195,147 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header><p>本书为基因学苑出版的生物信息大百科全书。逐渐更新中</p>
+</header><p>R语言支持windows，macos，linux等多个系统平台，提供图形化界面，下载和安装都不难，可以直接从官网进行下载，当前最新版本为4.31。R语言平均<strong>每半年</strong>更新一个比较大的版本，中间也会有一些小版本，建议安装最新的版本。可以从R的官网下载软件安装包，此外，微软也提供一个版本的R软件，微软版本的R提供一些额外功能，例如对多线程支持更好。软件最好安装到系统默认目录下。</p>
+<p><strong>安装建议</strong>:</p>
+<ul>
+<li>R和Rstudio建议安装最新版本；</li>
+<li>选择最近的镜像地址；</li>
+<li>检查用户名是否为中文，Rstudio不支持中文；</li>
+<li>先安装R，在安装Rstudio；</li>
+<li>软件安装到系统默认目录下；</li>
+<li>如果有需要，安装Rtools；</li>
+<li>苹果电脑Arm芯片需要选择合适的版本。</li>
+</ul>
+<p>R官网： <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></p>
+<p>Microsoft R：<a href="https://mran.microsoft.com/" class="uri">https://mran.microsoft.com/</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>截止到2023年5月，R最新版本为4.3.0）</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Rfig1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/r2.1.png" class="img-fluid figure-img" alt="Pictures" width="277"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.1: R官网截图</figcaption></figure>
+</div>
+</div>
+</div>
+<section id="windows系统" class="level3" data-number="2.0.1"><h3 data-number="2.0.1" class="anchored" data-anchor-id="windows系统">
+<span class="header-section-number">2.0.1</span> windows系统：</h3>
+<p><a href="https://cloud.r-project.org/bin/windows/base/R-4.3.0-win.exe">下载地址</a></p>
+</section><section id="mac系统" class="level3" data-number="2.0.2"><h3 data-number="2.0.2" class="anchored" data-anchor-id="mac系统">
+<span class="header-section-number">2.0.2</span> Mac系统</h3>
+<p><a href="https://cloud.r-project.org/bin/macosx/big-sur-x86_64/base/R-4.3.0-x86_64.pkg">Mac R</a> <a href="https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.0-arm64.pkg">Mac arm芯片</a></p>
+<p>###ubuntu系统：</p>
+<pre><code>#添加源
+# update indices
+sudo apt update -qq
+# install two helper packages we need
+sudo apt install --no-install-recommends software-properties-common dirmngr
+# add the signing key (by Michael Rutter) for these repos
+# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc 
+# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+#安装R
+sudo apt install --no-install-recommends r-base</code></pre>
+</section><section id="centos系统" class="level3" data-number="2.0.3"><h3 data-number="2.0.3" class="anchored" data-anchor-id="centos系统">
+<span class="header-section-number">2.0.3</span> CentOS系统：</h3>
+<pre><code>#安装epel源
+yum install -y epel-release
+#安装R
+yum install -y R.x86_64</code></pre>
+</section><section id="bioconda安装r" class="level3" data-number="2.0.4"><h3 data-number="2.0.4" class="anchored" data-anchor-id="bioconda安装r">
+<span class="header-section-number">2.0.4</span> bioconda安装R</h3>
+<pre><code>conda install -y r-base=4.3</code></pre>
+</section><section id="rstudio软件安装" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="rstudio软件安装">
+<span class="header-section-number">2.1</span> Rstudio软件安装</h2>
+<section id="安装rstudio" class="level3" data-number="2.1.1"><h3 data-number="2.1.1" class="anchored" data-anchor-id="安装rstudio">
+<span class="header-section-number">2.1.1</span> 安装Rstudio</h3>
+<p>当前R语言的集成开发环境很多，但其中Rstudio可以说是最优秀的，Rstudio是R软件的一个集成开发环境，为R的使用提供了极大的便利，Rstudio本身并不集成R软件，需要首先安装R软件，Rstudio会调用R软件。Rstudio支持windows，macos，Linux等多个系统平台，并且提供免费的桌面版与服务器版本可供选择，服务器版本可以搭建多用户使用场景，直接通过网络浏览器访问R。此外，Rstudio公司还开发了大量R语言的扩展包，操作简单，功能强大，极大扩展了R语言的功能。目前Rstudio公司已改名Posit。</p>
+<p>官方网站：<a href="https://posit.co/" class="uri">https://posit.co/</a></p>
+<p>下载地址：<a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>（截止到2023年5月，Rstudio最新版本为2023.03.1-446）</p>
+</div>
+</div>
+<p><a href="https://download1.rstudio.org/electron/windows/RStudio-2023.03.1-446.exe">windows</a></p>
+<p><a href="https://download1.rstudio.org/electron/macos/RStudio-2023.03.1-446.dmg">macos</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-Rfig2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/r2.2.png" class="img-fluid figure-img" alt="Rstudio官网" width="277"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.2: Rstudio官网</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="rstudio-server安装" class="level3" data-number="2.1.2"><h3 data-number="2.1.2" class="anchored" data-anchor-id="rstudio-server安装">
+<span class="header-section-number">2.1.2</span> rstudio-server安装</h3>
+<p>rstudio-server是rstudio的服务器版本，安装在linux系统下，通过rstudio-server，启动服务后，可以通过浏览器访问，使用在线版本R语言。</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Rfig3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/r2.3.png" class="img-fluid figure-img" width="277"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.3: <strong>?(caption)</strong></figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="解决rstudio无法识别中文问题" class="level3" data-number="2.1.3"><h3 data-number="2.1.3" class="anchored" data-anchor-id="解决rstudio无法识别中文问题">
+<span class="header-section-number">2.1.3</span> 解决Rstudio无法识别中文问题</h3>
+<p>方法一：创建一个新账户 创建一个新的英文账户，或者修改本地账户为使用windows账户登录。</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Rfig4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/r2.4.png" class="img-fluid figure-img" width="277"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.4: <strong>?(caption)</strong></figcaption></figure>
+</div>
+</div>
+</div>
+<p>方法二：修改缓存目录 Rstudio遇到中文报错，主要原因在于，Rstudio需要一个临时缓存文件，windows系统下这个默认目录在”C:“。其中XXXX为用户名，如果是中文，则无法识别，所以，我们需要修改TEMP和TMP这个目录环境变量。</p>
+</section></section><section id="rstudio-server" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="rstudio-server">
+<span class="header-section-number">2.2</span> Rstudio-server</h2>
+<section id="登入rstudio-server" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="登入rstudio-server">
+<span class="header-section-number">2.2.1</span> 登入rstudio-server</h3>
+<p>Rstudio提供一个rstudio-server服务器端程序，可以通过浏览器访问Rstudio环境。如果是系统管理员，可以安装rstudio-server服务，默认版本的Rstudio-server只支持一个版本的R。每个用户只能使用管理员设定的R版本。无法将自己安装的R语言软件在网页端使用，请知悉这点。但可以自己安装R扩展包。 通过浏览器，例如Chrome，Firefox，Safari等均可，尽量别使用IE以及360浏览器，可能会登录失败。rstudio-server默认端口号为8787，只需在IP地址之后加上端口号即可，账户密码与SSH登录账号一样。 登录网址：根据个人购买服务器IP进行登录，例如我们的服务器IP地址为”vip.tongyuangene.com”，只需在下面加上端口号即可。例如使用下面地址进行登录<a href="http://vip.tongyuangene.com:8787" class="uri">http://vip.tongyuangene.com:8787</a> 注意端口号要写清楚。登录账户密码与服务器登录账户密码一致。</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Rfig6" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/r2.6.png" class="img-fluid figure-img" width="277"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.5: rstudio</figcaption></figure>
+</div>
+</div>
+</div>
+<p>输入账户密码，与登录服务器账户密码相同。登录之后就可以使用Rstudio了。</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-Rfig7" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/r2.7.png" class="img-fluid figure-img" width="277"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.6: rstudio</figcaption></figure>
+</div>
+</div>
+</div>
 
 
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -410,14 +568,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./preface.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">前言</span>
+      <a href="./rbase-1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R分析环境搭建</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./rbase-1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R分析环境搭建</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -425,7 +580,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">基因学苑生物信息百科全书</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wangtong/mybook/edit/main/intro.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/wangtong/mybook/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">这本书使用 <a href="https://quarto.org/">Quarto</a>编写.</div>
   </div>
 </footer>

@@ -1,1 +1,1 @@
-Sitemap: https://r4ds.hadley.nz/sitemap.xml
+Sitemap: https://gene.wiki/sitemap.xml
