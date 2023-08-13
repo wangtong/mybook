@@ -1,51 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://r4ds.hadley.nz/index.html</loc>
-    <lastmod>2023-08-13T03:00:02.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r4ds.hadley.nz/intro.html</loc>
-    <lastmod>2023-08-13T03:06:40.388Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r4ds.hadley.nz/summary.html</loc>
-    <lastmod>2023-08-13T03:06:41.819Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r4ds.hadley.nz/references.html</loc>
-    <lastmod>2023-08-13T02:16:05.486Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r4ds.hadley.nz/preface-2e.html</loc>
-    <lastmod>2023-08-13T03:06:42.237Z</lastmod>
-  </url>
-  <url>
     <loc>https://gene.wiki/index.html</loc>
-    <lastmod>2023-08-13T07:17:35.312Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gene.wiki/summary.html</loc>
-    <lastmod>2023-08-13T06:51:33.838Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gene.wiki/preface-2e.html</loc>
-    <lastmod>2023-08-13T06:59:45.071Z</lastmod>
+    <lastmod>2023-08-13T07:23:04.154Z</lastmod>
   </url>
   <url>
     <loc>https://gene.wiki/preface.html</loc>
-    <lastmod>2023-08-13T07:17:37.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gene.wiki/intro.html</loc>
-    <lastmod>2023-08-13T07:17:34.540Z</lastmod>
+    <lastmod>2023-08-13T07:23:04.157Z</lastmod>
   </url>
   <url>
     <loc>https://gene.wiki/rbase-1.html</loc>
-    <lastmod>2023-08-13T07:17:22.392Z</lastmod>
+    <lastmod>2023-08-13T07:23:04.161Z</lastmod>
   </url>
   <url>
     <loc>https://gene.wiki/rbase-2.html</loc>
-    <lastmod>2023-08-13T07:16:43.882Z</lastmod>
+    <lastmod>2023-08-13T07:23:04.170Z</lastmod>
   </url>
 </urlset>

@@ -1,6 +1,7 @@
 project:
   type: book
   output-dir: docs
+  
 
 book:
   title: "生物信息大百科"
@@ -8,7 +9,6 @@ book:
  # date: "2023/8/13"
   cover-image: cover.jpg
   cover-image-alt: "Hello, World"
-  language: zh
   favicon: favicon.png
   site-url: https://gene.wiki
   repo-url: https://github.com/wangtong/mybook
@@ -33,7 +33,7 @@ book:
     - index.qmd
     
     - preface.qmd
-    - intro.qmd
+#    - intro.qmd
 #    - summary.qmd
 #    - references.qmd
 
