@@ -1,4 +1,16 @@
+---
+format: html
+lang: zh
+---
 # R软件安装 {.sec-install}
+
+```{r}
+#| echo: false
+
+source("_common.R")
+```
+
+## R语言简介
 
 R语言支持windows，macos，linux等多个系统平台，提供图形化界面，下载和安装都不难，可以直接从官网进行下载，当前最新版本为4.31。R语言平均**每半年**更新一个比较大的版本，中间也会有一些小版本，建议安装最新的版本。可以从R的官网下载软件安装包，此外，微软也提供一个版本的R软件，微软版本的R提供一些额外功能，例如对多线程支持更好。软件最好安装到系统默认目录下。
 
@@ -105,6 +117,7 @@ rstudio-server是rstudio的服务器版本，安装在linux系统下，通过rst
 ```{r}
 #| label: fig-Rfig3
 #| echo: false
+#| fig-cap: Rstudio-server
 
 knitr::include_graphics("images/r2.3.png")
 ```

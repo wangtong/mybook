@@ -2,6 +2,7 @@ project:
   type: book
   output-dir: docs
   
+  
 
 book:
   title: "生物信息大百科"
@@ -11,9 +12,9 @@ book:
   cover-image-alt: "Hello, World"
   favicon: favicon.png
   site-url: https://gene.wiki
-  repo-url: https://github.com/wangtong/mybook
+#  repo-url: https://github.com/wangtong/mybook
   repo-branch: main
-  repo-actions: [edit, issue]
+#  repo-actions: [edit, issue]
   reader-mode: false
 
   sidebar: 
@@ -24,10 +25,11 @@ book:
   
   page-footer:
     left: |
-      基因学苑生物信息百科全书
+      [生物信息百科全书](https://tongyuangene.com)
       
     right: |
-      这本书使用 <a href="https://quarto.org/">Quarto</a>编写.
+      学生物信息，选基因学苑
+
   
   chapters:
     - index.qmd
@@ -41,11 +43,13 @@ book:
 
     - part: 生物信息
 #      chapters: 
+
       
 
     - part: Linux
-#      chapters: 
-#      - whole-geme.qmd
+      chapters: 
+      - login.qmd
+      - transfile.qmd
 
 
     - part: 生物软件安装

@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gene.wiki/index.html</loc>
-    <lastmod>2023-08-13T07:23:04.154Z</lastmod>
+    <lastmod>2023-08-14T00:44:03.605Z</lastmod>
   </url>
   <url>
     <loc>https://gene.wiki/preface.html</loc>
-    <lastmod>2023-08-13T07:23:04.157Z</lastmod>
+    <lastmod>2023-08-14T00:44:03.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gene.wiki/login.html</loc>
+    <lastmod>2023-08-14T00:44:03.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gene.wiki/transfile.html</loc>
+    <lastmod>2023-08-14T00:44:03.616Z</lastmod>
   </url>
   <url>
     <loc>https://gene.wiki/rbase-1.html</loc>
-    <lastmod>2023-08-13T07:23:04.161Z</lastmod>
+    <lastmod>2023-08-14T00:44:03.619Z</lastmod>
   </url>
   <url>
     <loc>https://gene.wiki/rbase-2.html</loc>
-    <lastmod>2023-08-13T07:23:04.170Z</lastmod>
+    <lastmod>2023-08-14T00:44:03.624Z</lastmod>
   </url>
 </urlset>

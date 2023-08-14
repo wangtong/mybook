@@ -14,24 +14,122 @@
     "text": "Welcome to the second edition of “R for Data Science”! This is a major reworking of the first edition, removing material we no longer think is useful, adding material we wish we included in the first edition, and generally updating the text and code to reflect changes in best practices. We’re also very excited to welcome a new co-author: Mine Çetinkaya-Rundel, a noted data science educator and one of our colleagues at Posit (the company formerly known as RStudio).\nA brief summary of the biggest changes follows:\n\nThe first part of the book has been renamed to “Whole game”. The goal of this section is to give you the rough details of the “whole game” of data science before we dive into the details.\nThe second part of the book is “Visualize”. This part gives data visualization tools and best practices a more thorough coverage compared to the first edition. The best place to get all the details is still the ggplot2 book, but now R4DS covers more of the most important techniques.\nThe third part of the book is now called “Transform” and gains new chapters on numbers, logical vectors, and missing values. These were previously parts of the data transformation chapter, but needed much more room to cover all the details.\nThe fourth part of the book is called “Import”. It’s a new set of chapters that goes beyond reading flat text files to working with spreadsheets, getting data out of databases, working with big data, rectangling hierarchical data, and scraping data from web sites.\nThe “Program” part remains, but has been rewritten from top-to-bottom to focus on the most important parts of function writing and iteration. Function writing now includes details on how to wrap tidyverse functions (dealing with the challenges of tidy evaluation), since this has become much easier and more important over the last few years. We’ve added a new chapter on important base R functions that you’re likely to see in wild-caught R code.\nThe modeling part has been removed. We never had enough room to fully do modelling justice, and there are now much better resources available. We generally recommend using the tidymodels packages and reading Tidy Modeling with R by Max Kuhn and Julia Silge.\nThe “Communicate” part remains, but has been thoroughly updated to feature Quarto instead of R Markdown. This edition of the book has been written in Quarto, and it’s clearly the tool of the future."
   },
   {
+    "objectID": "login.html#选择合适的工具",
+    "href": "login.html#选择合适的工具",
+    "title": "1  登录服务器",
+    "section": "1.1 选择合适的工具",
+    "text": "1.1 选择合适的工具\n使用服务器需要使用ssh登录以及sftp传输文件，支持这两项功能的工具有很多。有收费也有免费，这里我们给大家列出一些，根据个人使用习惯来进行选择。这里面我们推荐windows用户选择xshell+xftp或者termius，mac用户选择termius。\nwindows系统\nxshell+xftp\nputty\nSSH Secure Shell Client\nsecureCRT\ntermius\nmobaxterm\nmacos系统\ntermius\nsecureCRT\nRoyal\ntabby"
+  },
+  {
+    "objectID": "login.html#如何登录服务器",
+    "href": "login.html#如何登录服务器",
+    "title": "1  登录服务器",
+    "section": "1.2 如何登录服务器",
+    "text": "1.2 如何登录服务器\n为了保持windows系统与macos系统一致性，这里推荐使用termius工具。Termius是一款支持SSH与Telnet协议的连接工具，支持windows系统，macos，Linux，iOS以及Android等几乎支持主流平台。且内置sftp，使用一个工具即可同时登录服务器和传输文件。 这里面需要注意，目前macos系统从AppStore下载的termius无法读取本地文件，因此强烈推荐从官网下载进行安装。根据个人系统进行下载。\nwindows版本下载地址：https://www.termius.com/windows\nmacos版本下载地址：https://termius.com/mac-os\n\n图1 打开termius，新建一个host\n\n图 2 填写标签，ip地址，端口号，用户名和密码\n\n图 3 双击新建host，选择图中蓝色部分\n\n图 4 出现图中界面，完成登录"
+  },
+  {
+    "objectID": "login.html#命令行登录",
+    "href": "login.html#命令行登录",
+    "title": "1  登录服务器",
+    "section": "1.3 命令行登录",
+    "text": "1.3 命令行登录\n当使用Linux命令行模式，widnows DOS， macos默认终端等，可以使用命令方式登录服务器。打开终端（Terminal），使用SSH命令进行登录，使用scp命令进行文件传输。\nssh wangtong@vip.tongyuangene.com  \n输入密码：\n\n\n\n\n\n\n注释\n\n\n\n注意事项1：Linux 输入密码是没有任何显示的，输入错误，可以连续按退格键。\n\n\n\n图 5 windows系统使用ssh远程登录"
+  },
+  {
+    "objectID": "login.html#移动端登录",
+    "href": "login.html#移动端登录",
+    "title": "1  登录服务器",
+    "section": "1.4 移动端登录",
+    "text": "1.4 移动端登录\niOS或者Andriod可以通过应用商店下载安装Termius应用。也可以从官网下载，网址:http://www.termius.com/\n\n\n\n\n\n\n\n\n\n\n图6 手机端登录服务器"
+  },
+  {
+    "objectID": "login.html#网页端登录",
+    "href": "login.html#网页端登录",
+    "title": "1  登录服务器",
+    "section": "1.5 网页端登录",
+    "text": "1.5 网页端登录\n服务器可以通过浏览器访问Rstudio-server软件使用R语言。通过浏览器，例如Chrome，Firefox，Safari等均可，尽量别使用IE以及360浏览器，可能会登录失败。 登录网址：根据个人服务器IP进行登录，比如购买的是通用型我们的服务器可以使用下面地址进行登录http://vip.tongyuangene.com:8787 注意端口号要写清楚。登录账户密码与服务器登录账户密码一致。 其他服务器如下，请与自己购买型号保持一致：\n\n图 7 登录R语言环境\n输入账户密码，与登录服务器账户密码相同。登录之后就可以使用Rstudio了。\n\n图 8 在网页端使用R语言"
+  },
+  {
+    "objectID": "transfile.html#termius传输文件",
+    "href": "transfile.html#termius传输文件",
+    "title": "2  传输文件",
+    "section": "2.1 termius传输文件",
+    "text": "2.1 termius传输文件\n最新版本的termius已经支持sftp文件传输了，之前只有pro版本才能使用。这里推荐使用termius进行文件传输。\n\n图1 使用termius进行文件传输"
+  },
+  {
+    "objectID": "transfile.html#filezilla传输文件",
+    "href": "transfile.html#filezilla传输文件",
+    "title": "2  传输文件",
+    "section": "2.2 filezilla传输文件",
+    "text": "2.2 filezilla传输文件\nFilezilla可以在windows，mac以及Linux下使用。 Filezilla下载地址：https://filezilla-project.org/\n\n图2 使用filezilla进行文件传输"
+  },
+  {
+    "objectID": "transfile.html#xftp传输文件",
+    "href": "transfile.html#xftp传输文件",
+    "title": "2  传输文件",
+    "section": "2.3 xftp传输文件",
+    "text": "2.3 xftp传输文件\nxftp只能在windows系统使用，xftp和xshell工具同属于xmanager套件，配合使用非常方便。xftp可以用于本地端与服务器端之间通过sftp或ftp协议进行数据传输，包括上传和下载数据。xftp登录同样需要IP地址，账户，密码与端口号，sftp端口号为22，ftp为21。\n\n图3 使用xftp与服务器间传输数据"
+  },
+  {
+    "objectID": "transfile.html#命令行传输",
+    "href": "transfile.html#命令行传输",
+    "title": "2  传输文件",
+    "section": "2.4 命令行传输",
+    "text": "2.4 命令行传输\nscp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。scp命令可以跨服务器之间传输文件，同样需要给定IP地址，账户密码。\n#scp上载文件\nscp -r data/ meta@vip.tongyuangene.com:~ \n#scp下载文件\nscp -r meta@vip.tongyuangene.com:/ifs1/Software/data ./\n也可以使用sftp命令进行传输。使用方法类似\nsftp meta@vip.tongyuangene.com\n#使用mget与put命令进行文件传输"
+  },
+  {
     "objectID": "rbase-1.html#r语言简介",
     "href": "rbase-1.html#r语言简介",
-    "title": "\n1  R分析环境搭建\n",
-    "section": "\n1.1 R语言简介",
-    "text": "1.1 R语言简介\n\n1.1.1 R语言简介\nR语言是一款统计软件，R语言也是一门编程语言，R语言也是一个数据分析平台。R是一个免费自由跨平台通用的统计计算与绘图软件，它有 Windows、Mac、Linux 等版本，均可免费下载使用。R 项目(The R Project for Statistical Computing)最早由新西兰奥克兰大学(Auckland University)的Robert Gentleman(1959-)和Ross Ihaka(1954-) 开发，故软件取两人名字的首字母命名为 R 。该项目始于1993年，2000年发布了首个官方版本 R 1.0.0 ，后期维护由 R 核心团队(R Core Team)负责。截止2022年，已发布到 4.2 版本。凭借其开源、免费、自由等开放式理念，R 迅速获得流行，目前已成为学术研究和商业应用领域最为常用的数据分析软件之一。随着大数据行业的发展，R语言变得越来越流行，R语言发挥了越来越重要的作用。 ### R语言应用 1. 数据计算 用来计算数据 2. 统计检验 分组进行检验，例如t检验，卡方检验等； 3. 统计建模 文献中公式 4. 数据挖掘 聚类，分类 5. 数据可视化 科学文献绘图\n\n1.1.2 R语言优缺点\nR语言的优点：\n\n开源、免费，具有完整的统计学功能，有大量的扩展包\n有效的数据处理和保存机制。\n拥有一整套数组和矩阵的操作运算符。\n一系列连贯而又完整的数据分析中间工具。\n图形统计可以对数据直接进行分析和显示，可用于多种图形设备。\n一种相当完善、简洁和高效的程序设计语言。\nR语言是彻底面向对象的统计编程语言。\nR语言和其它编程语言、数据库之间有很好的接口。\nR语言是自由软件，可以放心大胆地使用，但其功能却不比任何其它同类软件差。\nR语言具有丰富的网上资源。\n\n1.1.3 R语言的缺点\n\n开源、免费，具有完整的统计学功能，有大量的扩展包\n学习成本大；\n不擅长处理非结构数据；\n计算消耗资源较多；\nR的扩展包太多了，比较混乱，不容易找到适合的扩展包；\n不擅长多线程处理。\n\n1.1.4 R语言与Excel对比\n\nR语言开源免费，Excel收费；\nR语言支持Linux版本，Excel只支持windows，macos，ios，Android；\n能够计算大数据，Excel默认只能处理100万行数据； 4.R语言有更好扩展能力，有很多现成的包； 5、R语言有更好的绘图能力，例如可以很方便绘制热图，基因组圈图等复杂图形；\nR语言的Bioconductor项目可以处理生物数据，例如基因表达数据，单细胞测序等；\nR语言学习成本较大，不如Excel简单。\n\n1.1.5 R语言与Python对比\n数据分析的六个过程包括数据采集、数据存储、统计分析、数据挖掘、数据可视化以及生成报告。\n\nR语言具有更强大的统计学功能；\nR语言的Bioconductor项目可以处理生物数据，例如基因表达数据，单细胞测序等；\nR语言的绘图能力更强，尤其是ggplot2包；\nR不擅长字符串处理；\nR更消耗内存；\npython功能更强大，可以完成大的编程项目；\npython具有更强大的文本处理能力；\npython资源管理更好，R不擅长多线程计算，更消耗资源；\npython擅长字符串处理；\npython擅长深度学习；"
+    "title": "\n3  R分析环境搭建\n",
+    "section": "\n3.1 R语言简介",
+    "text": "3.1 R语言简介\nR语言是一款统计软件，R语言也是一门编程语言，R语言也是一个数据分析平台。R是一个免费自由跨平台通用的统计计算与绘图软件，它有 Windows、Mac、Linux 等版本，均可免费下载使用。R 项目(The R Project for Statistical Computing)最早由新西兰奥克兰大学(Auckland University)的Robert Gentleman(1959-)和Ross Ihaka(1954-) 开发，故软件取两人名字的首字母命名为 R 。该项目始于1993年，2000年发布了首个官方版本 R 1.0.0 ，后期维护由 R 核心团队(R Core Team)负责。截止2022年，已发布到 4.2 版本。凭借其开源、免费、自由等开放式理念，R 迅速获得流行，目前已成为学术研究和商业应用领域最为常用的数据分析软件之一。随着大数据行业的发展，R语言变得越来越流行，R语言发挥了越来越重要的作用。 ### R语言应用 1. 数据计算 用来计算数据 2. 统计检验 分组进行检验，例如t检验，卡方检验等； 3. 统计建模 文献中公式 4. 数据挖掘 聚类，分类 5. 数据可视化 科学文献绘图"
+  },
+  {
+    "objectID": "rbase-1.html#r语言优缺点",
+    "href": "rbase-1.html#r语言优缺点",
+    "title": "\n3  R分析环境搭建\n",
+    "section": "\n3.2 R语言优缺点",
+    "text": "3.2 R语言优缺点\nR语言的优点：\n\n开源、免费，具有完整的统计学功能，有大量的扩展包\n有效的数据处理和保存机制。\n拥有一整套数组和矩阵的操作运算符。\n一系列连贯而又完整的数据分析中间工具。\n图形统计可以对数据直接进行分析和显示，可用于多种图形设备。\n一种相当完善、简洁和高效的程序设计语言。\nR语言是彻底面向对象的统计编程语言。\nR语言和其它编程语言、数据库之间有很好的接口。\nR语言是自由软件，可以放心大胆地使用，但其功能却不比任何其它同类软件差。\nR语言具有丰富的网上资源。"
+  },
+  {
+    "objectID": "rbase-1.html#r语言的缺点",
+    "href": "rbase-1.html#r语言的缺点",
+    "title": "\n3  R分析环境搭建\n",
+    "section": "\n3.3 R语言的缺点",
+    "text": "3.3 R语言的缺点\n\n开源、免费，具有完整的统计学功能，有大量的扩展包\n学习成本大；\n不擅长处理非结构数据；\n计算消耗资源较多；\nR的扩展包太多了，比较混乱，不容易找到适合的扩展包；\n不擅长多线程处理。"
+  },
+  {
+    "objectID": "rbase-1.html#r语言与excel对比",
+    "href": "rbase-1.html#r语言与excel对比",
+    "title": "\n3  R分析环境搭建\n",
+    "section": "\n3.4 R语言与Excel对比",
+    "text": "3.4 R语言与Excel对比\n\nR语言开源免费，Excel收费；\nR语言支持Linux版本，Excel只支持windows，macos，ios，Android；\n能够计算大数据，Excel默认只能处理100万行数据； 4.R语言有更好扩展能力，有很多现成的包； 5、R语言有更好的绘图能力，例如可以很方便绘制热图，基因组圈图等复杂图形；\nR语言的Bioconductor项目可以处理生物数据，例如基因表达数据，单细胞测序等；\nR语言学习成本较大，不如Excel简单。"
+  },
+  {
+    "objectID": "rbase-1.html#r语言与python对比",
+    "href": "rbase-1.html#r语言与python对比",
+    "title": "\n3  R分析环境搭建\n",
+    "section": "\n3.5 R语言与Python对比",
+    "text": "3.5 R语言与Python对比\n数据分析的六个过程包括数据采集、数据存储、统计分析、数据挖掘、数据可视化以及生成报告。\n\nR语言具有更强大的统计学功能；\nR语言的Bioconductor项目可以处理生物数据，例如基因表达数据，单细胞测序等；\nR语言的绘图能力更强，尤其是ggplot2包；\nR不擅长字符串处理；\nR更消耗内存；\npython功能更强大，可以完成大的编程项目；\npython具有更强大的文本处理能力；\npython资源管理更好，R不擅长多线程计算，更消耗资源；\npython擅长字符串处理；\npython擅长深度学习；"
+  },
+  {
+    "objectID": "rbase-2.html#r语言简介",
+    "href": "rbase-2.html#r语言简介",
+    "title": "\n4  R软件安装\n",
+    "section": "\n4.1 R语言简介",
+    "text": "4.1 R语言简介\nR语言支持windows，macos，linux等多个系统平台，提供图形化界面，下载和安装都不难，可以直接从官网进行下载，当前最新版本为4.31。R语言平均每半年更新一个比较大的版本，中间也会有一些小版本，建议安装最新的版本。可以从R的官网下载软件安装包，此外，微软也提供一个版本的R软件，微软版本的R提供一些额外功能，例如对多线程支持更好。软件最好安装到系统默认目录下。\n安装建议:\n\nR和Rstudio建议安装最新版本；\n选择最近的镜像地址；\n检查用户名是否为中文，Rstudio不支持中文；\n先安装R，在安装Rstudio；\n软件安装到系统默认目录下；\n如果有需要，安装Rtools；\n苹果电脑Arm芯片需要选择合适的版本。\n\nR官网： https://www.r-project.org/\nMicrosoft R：https://mran.microsoft.com/\n\n\n\n\n\n\n注释\n\n\n\n截止到2023年5月，R最新版本为4.3.0）\n\n\n\n\n\n\n图 4.1: R官网截图\n\n\n\n\n4.1.1 windows系统：\n下载地址\n\n4.1.2 Mac系统\nMac R Mac arm芯片\n###ubuntu系统：\n#添加源\n# update indices\nsudo apt update -qq\n# install two helper packages we need\nsudo apt install --no-install-recommends software-properties-common dirmngr\n# add the signing key (by Michael Rutter) for these repos\n# To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc \n# Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9\nwget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc\n# add the R 4.0 repo from CRAN -- adjust 'focal' to 'groovy' or 'bionic' as needed\nsudo add-apt-repository \"deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/\"\n#安装R\nsudo apt install --no-install-recommends r-base\n\n4.1.3 CentOS系统：\n#安装epel源\nyum install -y epel-release\n#安装R\nyum install -y R.x86_64\n\n4.1.4 bioconda安装R\nconda install -y r-base=4.3"
   },
   {
     "objectID": "rbase-2.html#rstudio软件安装",
     "href": "rbase-2.html#rstudio软件安装",
-    "title": "\n2  R软件安装\n",
-    "section": "\n2.1 Rstudio软件安装",
-    "text": "2.1 Rstudio软件安装\n\n2.1.1 安装Rstudio\n当前R语言的集成开发环境很多，但其中Rstudio可以说是最优秀的，Rstudio是R软件的一个集成开发环境，为R的使用提供了极大的便利，Rstudio本身并不集成R软件，需要首先安装R软件，Rstudio会调用R软件。Rstudio支持windows，macos，Linux等多个系统平台，并且提供免费的桌面版与服务器版本可供选择，服务器版本可以搭建多用户使用场景，直接通过网络浏览器访问R。此外，Rstudio公司还开发了大量R语言的扩展包，操作简单，功能强大，极大扩展了R语言的功能。目前Rstudio公司已改名Posit。\n官方网站：https://posit.co/\n下载地址：https://posit.co/download/rstudio-desktop/\n\n\n\n\n\n\nNote\n\n\n\n（截止到2023年5月，Rstudio最新版本为2023.03.1-446）\n\n\nwindows\nmacos\n\n\n\n\nFigure 2.2: Rstudio官网\n\n\n\n\n2.1.2 rstudio-server安装\nrstudio-server是rstudio的服务器版本，安装在linux系统下，通过rstudio-server，启动服务后，可以通过浏览器访问，使用在线版本R语言。\n\n\n\n\nFigure 2.3: ?(caption)\n\n\n\n\n2.1.3 解决Rstudio无法识别中文问题\n方法一：创建一个新账户 创建一个新的英文账户，或者修改本地账户为使用windows账户登录。\n\n\n\n\nFigure 2.4: ?(caption)\n\n\n\n方法二：修改缓存目录 Rstudio遇到中文报错，主要原因在于，Rstudio需要一个临时缓存文件，windows系统下这个默认目录在”C:“。其中XXXX为用户名，如果是中文，则无法识别，所以，我们需要修改TEMP和TMP这个目录环境变量。"
+    "title": "\n4  R软件安装\n",
+    "section": "\n4.2 Rstudio软件安装",
+    "text": "4.2 Rstudio软件安装\n\n4.2.1 安装Rstudio\n当前R语言的集成开发环境很多，但其中Rstudio可以说是最优秀的，Rstudio是R软件的一个集成开发环境，为R的使用提供了极大的便利，Rstudio本身并不集成R软件，需要首先安装R软件，Rstudio会调用R软件。Rstudio支持windows，macos，Linux等多个系统平台，并且提供免费的桌面版与服务器版本可供选择，服务器版本可以搭建多用户使用场景，直接通过网络浏览器访问R。此外，Rstudio公司还开发了大量R语言的扩展包，操作简单，功能强大，极大扩展了R语言的功能。目前Rstudio公司已改名Posit。\n官方网站：https://posit.co/\n下载地址：https://posit.co/download/rstudio-desktop/\n\n\n\n\n\n\n注释\n\n\n\n（截止到2023年5月，Rstudio最新版本为2023.03.1-446）\n\n\nwindows\nmacos\n\n\n\n\n图 4.2: Rstudio官网\n\n\n\n\n4.2.2 rstudio-server安装\nrstudio-server是rstudio的服务器版本，安装在linux系统下，通过rstudio-server，启动服务后，可以通过浏览器访问，使用在线版本R语言。\n\n\n\n\n图 4.3: Rstudio-server\n\n\n\n\n4.2.3 解决Rstudio无法识别中文问题\n方法一：创建一个新账户 创建一个新的英文账户，或者修改本地账户为使用windows账户登录。\n\n\n\n\n图 4.4: ?(caption)\n\n\n\n方法二：修改缓存目录 Rstudio遇到中文报错，主要原因在于，Rstudio需要一个临时缓存文件，windows系统下这个默认目录在”C:“。其中XXXX为用户名，如果是中文，则无法识别，所以，我们需要修改TEMP和TMP这个目录环境变量。"
   },
   {
     "objectID": "rbase-2.html#rstudio-server",
     "href": "rbase-2.html#rstudio-server",
-    "title": "\n2  R软件安装\n",
-    "section": "\n2.2 Rstudio-server",
-    "text": "2.2 Rstudio-server\n\n2.2.1 登入rstudio-server\nRstudio提供一个rstudio-server服务器端程序，可以通过浏览器访问Rstudio环境。如果是系统管理员，可以安装rstudio-server服务，默认版本的Rstudio-server只支持一个版本的R。每个用户只能使用管理员设定的R版本。无法将自己安装的R语言软件在网页端使用，请知悉这点。但可以自己安装R扩展包。 通过浏览器，例如Chrome，Firefox，Safari等均可，尽量别使用IE以及360浏览器，可能会登录失败。rstudio-server默认端口号为8787，只需在IP地址之后加上端口号即可，账户密码与SSH登录账号一样。 登录网址：根据个人购买服务器IP进行登录，例如我们的服务器IP地址为”vip.tongyuangene.com”，只需在下面加上端口号即可。例如使用下面地址进行登录http://vip.tongyuangene.com:8787 注意端口号要写清楚。登录账户密码与服务器登录账户密码一致。\n\n\n\n\nFigure 2.5: rstudio\n\n\n\n输入账户密码，与登录服务器账户密码相同。登录之后就可以使用Rstudio了。\n\n\n\n\nFigure 2.6: rstudio"
+    "title": "\n4  R软件安装\n",
+    "section": "\n4.3 Rstudio-server",
+    "text": "4.3 Rstudio-server\n\n4.3.1 登入rstudio-server\nRstudio提供一个rstudio-server服务器端程序，可以通过浏览器访问Rstudio环境。如果是系统管理员，可以安装rstudio-server服务，默认版本的Rstudio-server只支持一个版本的R。每个用户只能使用管理员设定的R版本。无法将自己安装的R语言软件在网页端使用，请知悉这点。但可以自己安装R扩展包。 通过浏览器，例如Chrome，Firefox，Safari等均可，尽量别使用IE以及360浏览器，可能会登录失败。rstudio-server默认端口号为8787，只需在IP地址之后加上端口号即可，账户密码与SSH登录账号一样。 登录网址：根据个人购买服务器IP进行登录，例如我们的服务器IP地址为”vip.tongyuangene.com”，只需在下面加上端口号即可。例如使用下面地址进行登录http://vip.tongyuangene.com:8787 注意端口号要写清楚。登录账户密码与服务器登录账户密码一致。\n\n\n\n\n图 4.5: rstudio\n\n\n\n输入账户密码，与登录服务器账户密码相同。登录之后就可以使用Rstudio了。\n\n\n\n\n图 4.6: rstudio"
   }
 ]

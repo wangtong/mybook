@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="王通">
-<title>生物信息大百科 - 3&nbsp; R分析环境搭建</title>
+
+<title>生物信息大百科 - 1&nbsp; 登录服务器</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +23,7 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -27,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./rbase-2.html" rel="next">
-<link href="./transfile.html" rel="prev">
+<link href="./transfile.html" rel="next">
+<link href="./preface.html" rel="prev">
 <link href="./favicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -38,7 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -57,25 +62,35 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "提交",
     "search-label": "搜索"
   }
-}</script><script defer="" data-domain="r4ds.hadley.nz" src="https://plausible.io/js/plausible.js"></script>
+}</script>
+<script defer="" data-domain="r4ds.hadley.nz" src="https://plausible.io/js/plausible.js"></script>
+
+
 </head>
+
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./rbase-1.html">R语言</a></li><li class="breadcrumb-item"><a href="./rbase-1.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R分析环境搭建</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./login.html">Linux</a></li><li class="breadcrumb-item"><a href="./login.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">登录服务器</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="切换侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">生物信息大百科</a> 
     </div>
@@ -87,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">欢迎页</span></a>
@@ -111,10 +126,10 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./login.html" class="sidebar-item-text sidebar-link">
+  <a href="./login.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">登录服务器</span></span></a>
   </div>
 </li>
@@ -125,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">生物软件安装</span></span>
@@ -138,10 +153,10 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rbase-1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./rbase-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R分析环境搭建</span></span></a>
   </div>
 </li>
@@ -152,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <span class="sidebar-item-text sidebar-link text-start">
  <span class="menu-text">测序原理</span></span>
@@ -162,25 +177,29 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">生物信息分析平台搭建</span></span>
   </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">目录</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
    
   <ul>
-<li><a href="#r%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B" id="toc-r语言简介" class="nav-link active" data-scroll-target="#r%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B"><span class="header-section-number">3.1</span> R语言简介</a></li>
-  <li><a href="#r%E8%AF%AD%E8%A8%80%E4%BC%98%E7%BC%BA%E7%82%B9" id="toc-r语言优缺点" class="nav-link" data-scroll-target="#r%E8%AF%AD%E8%A8%80%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="header-section-number">3.2</span> R语言优缺点</a></li>
-  <li><a href="#r%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%BA%E7%82%B9" id="toc-r语言的缺点" class="nav-link" data-scroll-target="#r%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="header-section-number">3.3</span> R语言的缺点</a></li>
-  <li><a href="#r%E8%AF%AD%E8%A8%80%E4%B8%8Eexcel%E5%AF%B9%E6%AF%94" id="toc-r语言与excel对比" class="nav-link" data-scroll-target="#r%E8%AF%AD%E8%A8%80%E4%B8%8Eexcel%E5%AF%B9%E6%AF%94"><span class="header-section-number">3.4</span> R语言与Excel对比</a></li>
-  <li><a href="#r%E8%AF%AD%E8%A8%80%E4%B8%8Epython%E5%AF%B9%E6%AF%94" id="toc-r语言与python对比" class="nav-link" data-scroll-target="#r%E8%AF%AD%E8%A8%80%E4%B8%8Epython%E5%AF%B9%E6%AF%94"><span class="header-section-number">3.5</span> R语言与Python对比</a></li>
-  </ul></nav>
+  <li><a href="#选择合适的工具" id="toc-选择合适的工具" class="nav-link active" data-scroll-target="#选择合适的工具"><span class="header-section-number">1.1</span> 选择合适的工具</a></li>
+  <li><a href="#如何登录服务器" id="toc-如何登录服务器" class="nav-link" data-scroll-target="#如何登录服务器"><span class="header-section-number">1.2</span> 如何登录服务器</a></li>
+  <li><a href="#命令行登录" id="toc-命令行登录" class="nav-link" data-scroll-target="#命令行登录"><span class="header-section-number">1.3</span> 命令行登录</a></li>
+  <li><a href="#移动端登录" id="toc-移动端登录" class="nav-link" data-scroll-target="#移动端登录"><span class="header-section-number">1.4</span> 移动端登录</a></li>
+  <li><a href="#网页端登录" id="toc-网页端登录" class="nav-link" data-scroll-target="#网页端登录"><span class="header-section-number">1.5</span> 网页端登录</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">3</span>&nbsp; <span class="chapter-title">R分析环境搭建</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-login" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">登录服务器</span></span></h1>
 </div>
 
 
@@ -193,58 +212,89 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header><section id="r语言简介" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="r语言简介">
-<span class="header-section-number">3.1</span> R语言简介</h2>
-<p>R语言是一款统计软件，R语言也是一门编程语言，R语言也是一个数据分析平台。R是一个免费自由跨平台通用的统计计算与绘图软件，它有 Windows、Mac、Linux 等版本，均可免费下载使用。R 项目(The R Project for Statistical Computing)最早由新西兰奥克兰大学(Auckland University)的Robert Gentleman(1959-)和Ross Ihaka(1954-) 开发，故软件取两人名字的首字母命名为 R 。该项目始于1993年，2000年发布了首个官方版本 R 1.0.0 ，后期维护由 R 核心团队(R Core Team)负责。截止2022年，已发布到 4.2 版本。凭借其开源、免费、自由等开放式理念，R 迅速获得流行，目前已成为学术研究和商业应用领域最为常用的数据分析软件之一。随着大数据行业的发展，R语言变得越来越流行，R语言发挥了越来越重要的作用。 ### R语言应用 1. 数据计算 用来计算数据 2. 统计检验 分组进行检验，例如t检验，卡方检验等； 3. 统计建模 文献中公式 4. 数据挖掘 聚类，分类 5. 数据可视化 科学文献绘图</p>
-</section><section id="r语言优缺点" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="r语言优缺点">
-<span class="header-section-number">3.2</span> R语言优缺点</h2>
-<p>R语言的优点：</p>
-<ul>
-<li>开源、免费，具有完整的统计学功能，有大量的扩展包</li>
-<li>有效的数据处理和保存机制。</li>
-<li>拥有一整套数组和矩阵的操作运算符。</li>
-<li>一系列连贯而又完整的数据分析中间工具。</li>
-<li>图形统计可以对数据直接进行分析和显示，可用于多种图形设备。</li>
-<li>一种相当完善、简洁和高效的程序设计语言。</li>
-<li>R语言是彻底面向对象的统计编程语言。</li>
-<li>R语言和其它编程语言、数据库之间有很好的接口。</li>
-<li>R语言是自由软件，可以放心大胆地使用，但其功能却不比任何其它同类软件差。</li>
-<li>R语言具有丰富的网上资源。</li>
-</ul></section><section id="r语言的缺点" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="r语言的缺点">
-<span class="header-section-number">3.3</span> R语言的缺点</h2>
-<ul>
-<li>开源、免费，具有完整的统计学功能，有大量的扩展包</li>
-<li>学习成本大；</li>
-<li>不擅长处理非结构数据；</li>
-<li>计算消耗资源较多；</li>
-<li>R的扩展包太多了，比较混乱，不容易找到适合的扩展包；</li>
-<li>不擅长多线程处理。</li>
-</ul></section><section id="r语言与excel对比" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="r语言与excel对比">
-<span class="header-section-number">3.4</span> R语言与Excel对比</h2>
-<ol type="1">
-<li>R语言开源免费，Excel收费；</li>
-<li>R语言支持Linux版本，Excel只支持windows，macos，ios，Android；</li>
-<li>能够计算大数据，Excel默认只能处理100万行数据； 4.R语言有更好扩展能力，有很多现成的包； 5、R语言有更好的绘图能力，例如可以很方便绘制热图，基因组圈图等复杂图形；</li>
-<li>R语言的Bioconductor项目可以处理生物数据，例如基因表达数据，单细胞测序等；</li>
-<li>R语言学习成本较大，不如Excel简单。</li>
-</ol></section><section id="r语言与python对比" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="r语言与python对比">
-<span class="header-section-number">3.5</span> R语言与Python对比</h2>
-<p>数据分析的六个过程包括数据采集、数据存储、统计分析、数据挖掘、数据可视化以及生成报告。</p>
-<ol type="1">
-<li>R语言具有更强大的统计学功能；</li>
-<li>R语言的Bioconductor项目可以处理生物数据，例如基因表达数据，单细胞测序等；</li>
-<li>R语言的绘图能力更强，尤其是ggplot2包；</li>
-<li>R不擅长字符串处理；</li>
-<li>R更消耗内存；</li>
-<li>python功能更强大，可以完成大的编程项目；</li>
-<li>python具有更强大的文本处理能力；</li>
-<li>python资源管理更好，R不擅长多线程计算，更消耗资源；</li>
-<li>python擅长字符串处理；</li>
-<li>python擅长深度学习；</li>
-</ol>
+</header>
+
+<p>服务器相比于个人电脑具有较高的计算资源，例如有更大的CPU，内存，有磁盘阵列，具有更高的文件读写速度。通常我们需要通过个人电脑将测序数据传输到服务器端，然后在服务器上进行数据分析。作为生物信息分析人员，每天都需要通过SSH工具远程登录服务器，那么使用一款高效的连接工具就很有必要。 根据邮箱中给定的<strong>IP地址</strong>，<strong>账户</strong>，<strong>密码</strong>，<strong>端口号</strong>进行登录</p>
+<section id="选择合适的工具" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="选择合适的工具"><span class="header-section-number">1.1</span> 选择合适的工具</h2>
+<p>使用服务器需要使用ssh登录以及sftp传输文件，支持这两项功能的工具有很多。有收费也有免费，这里我们给大家列出一些，根据个人使用习惯来进行选择。这里面我们推荐windows用户选择xshell+xftp或者termius，mac用户选择termius。</p>
+<p><strong>windows系统</strong></p>
+<p><a href="https://www.xshell.com/zh/free-for-home-school/">xshell+xftp</a></p>
+<p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">putty</a></p>
+<p><a href="https://www.ssh.com/ssh/">SSH Secure Shell Client</a></p>
+<p><a href="https://www.vandyke.com/products/securecrt/">secureCRT</a></p>
+<p><a href="https://www.termius.com">termius</a></p>
+<p><a href="https://mobaxterm.mobatek.net/download.html">mobaxterm</a></p>
+<p><strong>macos系统</strong></p>
+<p><a href="https://www.termius.com">termius</a></p>
+<p><a href="https://www.vandyke.com/products/securecrt/">secureCRT</a></p>
+<p><a href="https://www.royalapps.com/ts/mac/features">Royal</a></p>
+<p><a href="https://tabby.sh/">tabby</a></p>
+</section>
+<section id="如何登录服务器" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="如何登录服务器"><span class="header-section-number">1.2</span> 如何登录服务器</h2>
+<p>为了保持windows系统与macos系统一致性，这里推荐使用termius工具。Termius是一款支持SSH与Telnet协议的连接工具，支持windows系统，macos，Linux，iOS以及Android等几乎支持主流平台。且内置sftp，使用一个工具即可同时登录服务器和传输文件。 这里面需要注意，目前macos系统从AppStore下载的termius无法读取本地文件，因此强烈推荐从官网下载进行安装。根据个人系统进行下载。</p>
+<p>windows版本下载地址：<a href="https://www.termius.com/windows" class="uri">https://www.termius.com/windows</a></p>
+<p>macos版本下载地址：<a href="https://termius.com/mac-os" class="uri">https://termius.com/mac-os</a></p>
+<p><img src="diagrams/linux/login1.png" class="img-fluid"></p>
+<p>图1 打开termius，新建一个host</p>
+<p><img src="diagrams/linux/login2.png" class="img-fluid"></p>
+<p>图 2 填写标签，ip地址，端口号，用户名和密码</p>
+<p><img src="diagrams/linux/login3.png" class="img-fluid"></p>
+<p>图 3 双击新建host，选择图中蓝色部分</p>
+<p><img src="diagrams/linux/login4.png" class="img-fluid"></p>
+<p>图 4 出现图中界面，完成登录</p>
+</section>
+<section id="命令行登录" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="命令行登录"><span class="header-section-number">1.3</span> 命令行登录</h2>
+<p>当使用Linux命令行模式，widnows DOS， macos默认终端等，可以使用命令方式登录服务器。打开终端（Terminal），使用SSH命令进行登录，使用scp命令进行文件传输。</p>
+<pre><code>ssh wangtong@vip.tongyuangene.com  
+输入密码：</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+注释
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>注意事项1：Linux 输入密码是没有任何显示的，输入错误，可以连续按退格键。</p>
+</div>
+</div>
+<p><img src="diagrams/linux/login5.png" class="img-fluid"></p>
+<p>图 5 windows系统使用ssh远程登录</p>
+</section>
+<section id="移动端登录" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="移动端登录"><span class="header-section-number">1.4</span> 移动端登录</h2>
+<p>iOS或者Andriod可以通过应用商店下载安装Termius应用。也可以从官网下载，网址:<a href="http://www.termius.com/" class="uri">http://www.termius.com/</a></p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="diagrams/linux/login7.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="diagrams/linux/login8.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>图6 手机端登录服务器</p>
+</section>
+<section id="网页端登录" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="网页端登录"><span class="header-section-number">1.5</span> 网页端登录</h2>
+<p>服务器可以通过浏览器访问Rstudio-server软件使用R语言。通过浏览器，例如Chrome，Firefox，Safari等均可，尽量别使用IE以及360浏览器，可能会登录失败。 登录网址：根据个人服务器IP进行登录，比如购买的是通用型我们的服务器可以使用下面地址进行登录<a href="http://vip.tongyuangene.com:8787" class="uri">http://vip.tongyuangene.com:8787</a> 注意端口号要写清楚。登录账户密码与服务器登录账户密码一致。 其他服务器如下，请与自己购买型号保持一致：</p>
+<p><img src="diagrams/linux/login9.png" class="img-fluid"></p>
+<p>图 7 登录R语言环境</p>
+<p>输入账户密码，与登录服务器账户密码相同。登录之后就可以使用Rstudio了。</p>
+<p><img src="diagrams/linux/login10.png" class="img-fluid"></p>
+<p>图 8 在网页端使用R语言</p>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -476,19 +526,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./transfile.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">传输文件</span></span>
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./preface.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">前言</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./rbase-2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R软件安装</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./transfile.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">传输文件</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left"><a href="https://tongyuangene.com">生物信息百科全书</a></div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -496,6 +549,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">学生物信息，选基因学苑</div>
   </div>
 </footer>
+
 
 
 </body></html>
